@@ -1,0 +1,82 @@
+MySQL 데이터베이스(마리아 데이터벵이스)
+
+mysql 실행
+cmd -> mysql -u [ID] -p enter -h [서버주소]
+
+[password]1234
+
+show databases;
+
+use jspdb;
+
+
+--------------
+<Mysql commands>
+status - mysql basic setting search
+
+<Database install, delete, select, search content>
+Search content : show database;
+
+
+DB Create : create database testDB;
+DB remove :  drop database testDB;
+DB select : use testDB;
+
+Create table [table name](
+	coloumn  datatype restrain,
+	coloumn  datatype restrain,
+	coloumn  datatype restrain,
+	coloumn  datatype restrain
+);
+
+varchar2  -> varchar
+number -> int                               //oracle -> mySQL
+
+drop table [table name];
+
+desc [table name]
+
+--------------------------------------------------------------------------
+insert into [table name]{column name1,column name2, ...}
+values (data1, data2,.....);
+
+select [coloumn name/*]
+from table name
+where.....
+
+delete from tablename{where 조건};
+
+----------------------------------------------------------------------------
+create table test5(
+idx int primary key auto_increment);   null 값일때 자동으로 숫자 생성
+
+create table test5(
+idx int primary key auto_increment, datetime DATETIME, timestamp TIMESTAMP); 
+
+insert into test5 values
+(null, '2019-01-18 12:27:30','2019-01-18 12:27:30');
+
+insert into test values
+(null,null,null);
+
+=> TiMESTAMP는 NULL값 입력시 현재 시간정보 자동으로 입력, DATETIME 은
+NULL 입력시 그대로 입력된다
+
+update member set RegNum='900505-2555555' where idx=1;
+
+**데이터 베이스**
+데이터의 효율적인 관리를 목적으로 하는 데이터의 집합
+
+DBMS
+데이터베이스를 관리하는 프로그램
+데이터를 안정적으로 보관하는 프로그램
+
+*JDBS(Java Database Connectivity)
+자바프로그램(JSP포함) 관계형 데이터(DB, 테이블) 연결하는 인터페이스
+
+
+
+
+
+
+
